@@ -1,6 +1,6 @@
 # Laboratory 3
 
-At the last laboratory i finished the tasks Bonus, Optional and Compulsory.
+At the last laboratory I finished the tasks Bonus, Optional and Compulsory.
 
 This repository is for the tasks given at laboratory 3. I managed to finish compulsory so far. I will try to finish
 other tasks before the next laboratory.
@@ -20,7 +20,7 @@ Clone this repository and open it with IntelliJ IDEA. Build this project
 
 Go to the folder where the file is located. Open a new terminal here.
 
-If you want to compile the file the file Main.java you must type the command.
+If you want to compile the file Main.java you must type the command.
 
 ```bash
 javac -d . Main.java
@@ -46,7 +46,7 @@ The task consists of:<br />
 - [x] Each location will contain a Map representing the times required to go from this location to others.
 - [x] Create all the objects given in the example.
 
-Here is the output i recieved:<br />
+Here is the output I received:<br />
 
 ```dif
 City created successfully.
@@ -73,7 +73,45 @@ Process finished with exit code 0
 
 ## Optional
 
-Not yet worked on.
+The task consists of:<br />
+
+- [x] In the City class, create a method to display the locations that are visitable and are not payable, sorted by
+  their opening hour.
+- [x] Create default methods in the interface Visitable, with the opening hour 09:30 and the closing hour 20:00.
+- [x] Create a static method getVisitingDuration,in the interface Visitable, that returns a Duration object,
+  representing how long a location is opened during a day.
+- [x] Create the class TravelPlan. An instance of this class will contain a city, and the preferences regarding the
+  visiting order.
+- [ ] Implement an efficient algorithm to determine the shortest path between two given locations, conforming to the
+  preferences.
+
+Here is the output I received:<br />
+
+```dif
+Locations that are visitable and payable:
+Location{name='Museum of Art'}
+Location{name='Museum of History'}
+
+
+Successfully added Hotel Continental to the visiting list
+There is no hotel left to visit.
+Successfully added Church1 to the visiting list
+Successfully added Church2 to the visiting list
+Successfully added Museum of History to the visiting list
+Successfully added TheBomb to the visiting list
+Successfully added Museum of Art to the visiting list
+There are no locations left to visit in the city
+
+
+The travel plan is:
+1. Hotel Continental
+2. Church1
+3. Church2
+4. Museum of History
+5. TheBomb
+6. Museum of Art
+
+```
 
 ## Bonus
 

@@ -1,10 +1,12 @@
-package lab3.compulsory;
+package lab3.optional;
 
-import lab3.compulsory.locations.*;
+import lab3.optional.locations.*;
+import lab3.optional.travelplan.TravelPlan;
+import lab3.optional.travelplan.VisitPreference;
 
 import java.util.Arrays;
 
-public class Main {
+public class MainOptional {
 
     public static void main(String[] args) {
 
@@ -38,19 +40,22 @@ public class Main {
         myCity.addLocation(v5);
         myCity.addLocation(v6);
 
-        System.out.println("City created successfully.");
+        myCity.printVisitableAndPayableLocations();
 
-        //test sorting method
-        Location[] locations = {v1, v2, v3, v4, v5, v6};
+        System.out.print("\n\n");
 
-        System.out.println("Array before sorting is:");
-        for (Location location : locations)
-            System.out.println(location);
+        TravelPlan myTravelPlan = new TravelPlan(myCity);
+        myTravelPlan.addVisitPreference(VisitPreference.Hotel);
+        myTravelPlan.addVisitPreference(VisitPreference.Hotel);
+        myTravelPlan.addVisitPreference(VisitPreference.Church);
+        myTravelPlan.addVisitPreference(VisitPreference.Church);
+        myTravelPlan.addVisitPreference(VisitPreference.Museum);
+        myTravelPlan.addVisitPreference(VisitPreference.Restaurant);
+        myTravelPlan.addVisitPreference(VisitPreference.Museum);
+        myTravelPlan.addVisitPreference(VisitPreference.Museum);
 
-        Arrays.sort(locations);
+        System.out.print("\n\n");
 
-        System.out.println("\n\nArray after sorting is:");
-        for (Location location : locations)
-            System.out.println(location);
+        myTravelPlan.printTravelPlan();
     }
 }
